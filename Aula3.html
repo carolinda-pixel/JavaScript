@@ -25,10 +25,16 @@
   <div>
     <p id="ex1">1 - Alterar o texto do "Menu 1" para o item 1.</p>
     <p id="ex2">2 - Alterar o "Menu 2" para o item 2 através da tag.</p>
+    <p id="ex3">3 - Inserir parênteses () nos comandos da classe "comandos".</p>
   </div>
   <script>
     document.getElementsByTagName("p")[0].innerHTML = "Item 1";
+
     document.getElementsByTagName("p")[1].innerHTML = "Item 2";
+
+    document.getElementsByClassName("comandos")[0].innerHTML = document.getElementsByClassName("comandos")[0].innerHTML + "()";
+    document.getElementsByClassName("comandos")[1].innerHTML = document.getElementsByClassName("comandos")[1].innerHTML + "()";
+    document.getElementsByClassName("comandos")[2].innerHTML = document.getElementsByClassName("comandos")[2].innerHTML + "()";
   </script>
 </body>
 
