@@ -4,12 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+  <style>
+      .contador p{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: aquamarine;
+        border: 1px solid;
+        font-size: 23px;
+        padding: 10px;
+      }
+    </style>
   </head>
   <body>
-    
+    <header>
+      <nav>
+        <p>Menu 1</p>
+        <p>Menu 2</p>
+        <p>Menu 3</p>
+      </nav>
+    </header>
+    <button>Ocultar div</button>
+    <button>Mostrar div</button>
+    <main>
+      <h2 id="titulo">Aula 3 - Javascript DOM</h2>
+      <p class="comandos">getElementById</p>
+      <p class="comandos">getElementsByTagName</p>
+      <p class="comandos">getElementsByClassName</p>
+      <p>Comandos para pegar os elementos.</p>
+    </main>
+
     <div>
       <p id="ex10">10 - Colocar os botões para funcionar</p>
       <p id="ex11">11 - Inserir um evento para quando passar o mouse por cima: inserir uma borda e cor de fundo no "Aula 3 - Javascript DOM", e quando o mouse sair de cima: voltar ao estado original.</p>
+      <p id="ex12">12 - Fazer um contador de visitas para o site</p>
+    </div>
+
+    <div class="contador">
+      <p class="contador">0</p>
     </div>
 
     <script>
@@ -32,6 +64,11 @@
         texto.style.border = "none";
         texto.style.backgroundColor = "white";
     });
+    //Exer. 12
+    let contador = document.querySelectorAll(".contador")[1].innerHTML;
+    contador++;
+    console.log(contador);
+    document.querySelectorAll(".contador")[1].innerHTML = contador;
   </script>
 
   </body>
